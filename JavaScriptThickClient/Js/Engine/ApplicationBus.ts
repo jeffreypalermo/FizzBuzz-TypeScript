@@ -23,13 +23,11 @@ function ApplicationBus() {
 }
 
 var GlobalApplicationBus = new ApplicationBus();
+class LoggingHandler implements JavaScriptThickClient.Js.Engine.Handler {
+    CanHandle(event) { return true; }
+    Handle(event) {
+        console.log(event);
+    }
+}
 
-var eventLogger = new Handler();
-eventLogger.CanHandle = function(event){
-    return true;
-};
-eventLogger.Handle = function(event) {
-    console.log(event);
-};
-
-GlobalApplicationBus.Add(eventLogger);
+GlobalApplicationBus.Add(new LoggingHandler());

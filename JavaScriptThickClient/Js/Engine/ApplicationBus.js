@@ -16,12 +16,15 @@ function ApplicationBus() {
     };
 }
 var GlobalApplicationBus = new ApplicationBus();
-var eventLogger = new Handler();
-eventLogger.CanHandle = function (event) {
-    return true;
-};
-eventLogger.Handle = function (event) {
-    console.log(event);
-};
-GlobalApplicationBus.Add(eventLogger);
+var LoggingHandler = (function () {
+    function LoggingHandler() { }
+    LoggingHandler.prototype.CanHandle = function (event) {
+        return true;
+    };
+    LoggingHandler.prototype.Handle = function (event) {
+        console.log(event);
+    };
+    return LoggingHandler;
+})();
+GlobalApplicationBus.Add(new LoggingHandler());
 //@ sourceMappingURL=ApplicationBus.js.map

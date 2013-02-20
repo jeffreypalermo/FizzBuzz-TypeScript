@@ -1,7 +1,7 @@
-﻿function Handler() {
-    this.CanHandle = function (event) {
-        return false;
-    };
+﻿module JavaScriptThickClient.Js.Engine {
 
-    this.Handle = function(event) {};
-};
+    export interface Handler {
+        CanHandle(event): bool;
+        Handle(event): void;
+    };
+}

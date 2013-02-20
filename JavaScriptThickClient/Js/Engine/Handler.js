@@ -1,9 +1,7 @@
-function Handler() {
-    this.CanHandle = function (event) {
-        return false;
-    };
-    this.Handle = function (event) {
-    };
-}
-;
+var JavaScriptThickClient;
+(function (JavaScriptThickClient) {
+    (function (Js) {
+            })(JavaScriptThickClient.Js || (JavaScriptThickClient.Js = {}));
+    var Js = JavaScriptThickClient.Js;
+})(JavaScriptThickClient || (JavaScriptThickClient = {}));
 //@ sourceMappingURL=Handler.js.map

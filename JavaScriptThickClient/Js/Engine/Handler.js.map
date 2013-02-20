@@ -1,1 +1,1 @@
-{"version":3,"file":"Handler.js","sources":["Handler.ts"],"names":["Handler","Handler.CanHandle","Handler.Handle"],"mappings":"AAAA,SAAS,OAAO;IACZA,IAAIA,CAACA,SAASA,GAAGA,UAAUA,KAAKA;QAC5BC,OAAOA,KAAKA,CAACA;IACjBA,CAACA;IAEDD,IAAIA,CAACA,MAAMA,GAAGA,UAASA,KAAKA;IAAGE,CAACA;AACpCF,CAACA;AAAA"}
+{"version":3,"file":"Handler.js","sources":["Handler.ts"],"names":["JavaScriptThickClient","JavaScriptThickClient.Js"],"mappings":"AAAA,IAAO,qBAAqB;AAM3B,CAND,UAAO,qBAAqB;KAArBA,UAAsBA,EAAEA;YAM/BC,CAACA,+DAAAD;IANMA;AAMNA,CAAAA,yDAAA"}
