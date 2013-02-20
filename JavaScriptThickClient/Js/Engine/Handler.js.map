@@ -1,0 +1,1 @@
+{"version":3,"file":"Handler.js","sources":["Handler.ts"],"names":["Handler","Handler.CanHandle","Handler.Handle"],"mappings":"AAAA,SAAS,OAAO;IACZA,IAAIA,CAACA,SAASA,GAAGA,UAAUA,KAAKA;QAC5BC,OAAOA,KAAKA,CAACA;IACjBA,CAACA;IAEDD,IAAIA,CAACA,MAAMA,GAAGA,UAASA,KAAKA;IAAGE,CAACA;AACpCF,CAACA;AAAA"}
