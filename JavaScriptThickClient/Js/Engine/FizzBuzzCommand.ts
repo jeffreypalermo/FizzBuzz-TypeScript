@@ -1,3 +1,12 @@
-﻿function FizzBuzzCommand(configuration) {
-    this.configuration = configuration;
-};
+﻿/// <reference path="Configuration.ts" />
+
+module JavaScriptThickClient.Js.Engine {
+
+    export class FizzBuzzCommand {
+        private configuration: Configuration;
+
+        constructor(configuration) {
+            this.configuration = configuration;
+        }
+    }
+}

@@ -49,7 +49,7 @@
                 var config = new JavaScriptThickClient.Js.Engine.Configuration(eval('(' + $("#replacements").val() + ')'),// { 3: 'Fizz', 5: 'Buzz', 7: 'Baz' },
                     $("#lowerBound").val(), $("#upperBound").val());
                 
-                GlobalApplicationBus.Send(new FizzBuzzCommand(config));
+                GlobalApplicationBus.Send(new JavaScriptThickClient.Js.Engine.FizzBuzzCommand(config));
             });
         });
 
