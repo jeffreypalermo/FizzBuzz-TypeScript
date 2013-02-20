@@ -1,23 +1,31 @@
 ﻿/// <reference path="ApplicationBus.ts" />
 /// <reference path="Runner.ts" />
+/// <reference path="Appender.ts" />
 
+module JavaScriptThickClient.Js.Engine {
 
-function FizzBuzzCommandHandler(appender) {
-    this.appender = appender;
-    
-    this.CanHandle = function(event) {
-        return event.configuration !== undefined;
-    };
-    
-    this.Handle = function (event) {
-        GlobalApplicationBus.Send("Clearing appender");
-        this.appender.Clear();
-        
-        var runner = new JavaScriptThickClient.Js.Engine.Runner(event.configuration.replacementRules);
+    export class FizzBuzzCommandHandler implements Handler {
 
-        GlobalApplicationBus.Send("Begin run");
-        runner.Run(event.configuration.lowerBound, 
-            event.configuration.upperBound, this.appender);
-        GlobalApplicationBus.Send("End run");
-    };
+        private appender: Appender;
+
+        constructor(appender) {
+            this.appender = appender;
+        }
+
+        CanHandle(event) {
+            return event.configuration !== undefined;
+        }
+
+        Handle(event) {
+            GlobalApplicationBus.Send("Clearing appender");
+            this.appender.Clear();
+
+            var runner = new JavaScriptThickClient.Js.Engine.Runner(event.configuration.replacementRules);
+
+            GlobalApplicationBus.Send("Begin run");
+            runner.Run(event.configuration.lowerBound,
+                event.configuration.upperBound, this.appender);
+            GlobalApplicationBus.Send("End run");
+        };
+    }
 }

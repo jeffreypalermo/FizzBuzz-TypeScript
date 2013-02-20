@@ -35,7 +35,7 @@
                 $("#console").children().remove();
             };
 
-            var handler = new FizzBuzzCommandHandler(appender);
+            var handler = new JavaScriptThickClient.Js.Engine.FizzBuzzCommandHandler(appender);
             
             GlobalApplicationBus.Add(handler);
         });
