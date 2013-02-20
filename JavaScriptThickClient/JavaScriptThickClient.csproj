@@ -77,17 +77,63 @@
     <Content Include="Content\themes\base\jquery.ui.theme.css" />
   </ItemGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="Js\Engine\Appender.ts" />
     <TypeScriptCompile Include="Js\Engine\ApplicationBus.ts" />
+    <Content Include="Js\Engine\ApplicationBus.js">
+      <DependentUpon>ApplicationBus.ts</DependentUpon>
+    </Content>
+    <Content Include="Js\Engine\ApplicationBus.js.map">
+      <DependentUpon>ApplicationBus.ts</DependentUpon>
+    </Content>
     <TypeScriptCompile Include="Js\Engine\Configuration.ts" />
+    <Content Include="Js\Engine\Configuration.js">
+      <DependentUpon>Configuration.ts</DependentUpon>
+    </Content>
+    <Content Include="Js\Engine\Configuration.js.map">
+      <DependentUpon>Configuration.ts</DependentUpon>
+    </Content>
     <TypeScriptCompile Include="Js\Engine\FizzBuzzCommandHandler.ts" />
+    <Content Include="Js\Engine\FizzBuzzCommandHandler.js">
+      <DependentUpon>FizzBuzzCommandHandler.ts</DependentUpon>
+    </Content>
+    <Content Include="Js\Engine\FizzBuzzCommandHandler.js.map">
+      <DependentUpon>FizzBuzzCommandHandler.ts</DependentUpon>
+    </Content>
     <TypeScriptCompile Include="Js\Engine\Handler.ts" />
+    <Content Include="Js\Engine\Handler.js">
+      <DependentUpon>Handler.ts</DependentUpon>
+    </Content>
+    <Content Include="Js\Engine\Handler.js.map">
+      <DependentUpon>Handler.ts</DependentUpon>
+    </Content>
     <TypeScriptCompile Include="Js\Engine\FizzBuzzCommand.ts" />
+    <Content Include="Js\Engine\FizzBuzzCommand.js">
+      <DependentUpon>FizzBuzzCommand.ts</DependentUpon>
+    </Content>
+    <Content Include="Js\Engine\FizzBuzzCommand.js.map">
+      <DependentUpon>FizzBuzzCommand.ts</DependentUpon>
+    </Content>
     <TypeScriptCompile Include="Js\Engine\Runner.ts" />
+    <Content Include="Js\Engine\Runner.js">
+      <DependentUpon>Runner.ts</DependentUpon>
+    </Content>
+    <Content Include="Js\Engine\Runner.js.map">
+      <DependentUpon>Runner.ts</DependentUpon>
+    </Content>
     <TypeScriptCompile Include="Js\Program.ts" />
-  </ItemGroup>
-  <ItemGroup>
+    <Content Include="Js\Program.js">
+      <DependentUpon>Program.ts</DependentUpon>
+    </Content>
+    <Content Include="Js\Program.js.map">
+      <DependentUpon>Program.ts</DependentUpon>
+    </Content>
     <Content Include="Index.html" />
+    <TypeScriptCompile Include="Js\Engine\Appender.ts" />
+    <Content Include="Js\Engine\Appender.js">
+      <DependentUpon>Appender.ts</DependentUpon>
+    </Content>
+    <Content Include="Js\Engine\Appender.js.map">
+      <DependentUpon>Appender.ts</DependentUpon>
+    </Content>
     <Content Include="Scripts\jquery-1.6.2-vsdoc.js" />
     <Content Include="Scripts\jquery-1.6.2.js" />
     <Content Include="Scripts\jquery-1.6.2.min.js" />
