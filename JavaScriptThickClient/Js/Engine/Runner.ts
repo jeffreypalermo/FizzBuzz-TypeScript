@@ -1,20 +1,24 @@
-﻿function Runner(replacements)
+﻿class Runner
 {
-    this.replacements = replacements;
+    replacements: any;
 
-    this.Run = function(start, end, appender) {
+    constructor(replacements) {
+        this.replacements = replacements;
+    }
+
+    Run(start, end, appender){
         for (var i = start; i <= end; i++) {
             appender.Append(this.GetLine(i));
         }
     };
 
-    this.GetLine = function(value) {
+    GetLine(value) {
         var line = this.GetReplacements(value);
 
         return line == "" ? value : line;
     };
 
-    this.GetReplacements = function(value) {
+    GetReplacements(value) {
         var replacedValue = "";
         for (var key in this.replacements) {
             if (value % key === 0) replacedValue += this.replacements[key];

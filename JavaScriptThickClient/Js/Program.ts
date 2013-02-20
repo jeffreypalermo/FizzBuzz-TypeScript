@@ -1,4 +1,6 @@
-﻿function Program(configuration, appender) {
+﻿/// <reference path="Engine/Runner.ts" />
+
+function Program(configuration, appender) {
 
     this.appender = appender;
     this.Main = function() {
