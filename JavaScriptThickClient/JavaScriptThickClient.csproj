@@ -113,6 +113,10 @@
       <DependentUpon>FizzBuzzCommand.ts</DependentUpon>
     </Content>
     <TypeScriptCompile Include="Js\Engine\Runner.ts" />
+    <TypeScriptCompile Include="Js\Engine\LoggingHandler.ts" />
+    <Content Include="Js\Engine\LoggingHandler.js">
+      <DependentUpon>LoggingHandler.ts</DependentUpon>
+    </Content>
     <Content Include="Js\Engine\Runner.js">
       <DependentUpon>Runner.ts</DependentUpon>
     </Content>

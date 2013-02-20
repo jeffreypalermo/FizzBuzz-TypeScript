@@ -21,8 +21,12 @@
     <script type="text/javascript" src="/Js/Engine/Appender.js"></script>
     <script type="text/javascript" src="/Js/Engine/Runner.js"></script>
     <script type="text/javascript" src="/Js/Program.js"></script>
+    <script type="text/javascript" src="/Js/Engine/LoggingHandler.js"></script>
     <script type="text/javascript">
+        
         $().ready(function () {
+            GlobalApplicationBus.Add(new JavaScriptThickClient.Js.Engine.LoggingHandler());
+            
             var appender = new JavaScriptThickClient.Js.Engine.Appender();
             appender.Append = function (line) {
                 $("#console").append("<li>" + line + "</li>");
@@ -30,7 +34,6 @@
             appender.Clear = function() {
                 $("#console").children().remove();
             };
-
 
             var handler = new FizzBuzzCommandHandler(appender);
             

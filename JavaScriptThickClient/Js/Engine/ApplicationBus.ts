@@ -1,6 +1,5 @@
 ﻿/// <reference path="Handler.ts" />
 
-
 function ApplicationBus() {
     this.listeners = [];
     this.Add = function(listener) {
@@ -20,14 +19,6 @@ function ApplicationBus() {
             }
         }
     };
-}
+};
 
 var GlobalApplicationBus = new ApplicationBus();
-class LoggingHandler implements JavaScriptThickClient.Js.Engine.Handler {
-    CanHandle(event) { return true; }
-    Handle(event) {
-        console.log(event);
-    }
-}
-
-GlobalApplicationBus.Add(new LoggingHandler());

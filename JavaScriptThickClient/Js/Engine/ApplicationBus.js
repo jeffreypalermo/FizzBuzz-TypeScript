@@ -15,16 +15,6 @@ function ApplicationBus() {
         }
     };
 }
+;
 var GlobalApplicationBus = new ApplicationBus();
-var LoggingHandler = (function () {
-    function LoggingHandler() { }
-    LoggingHandler.prototype.CanHandle = function (event) {
-        return true;
-    };
-    LoggingHandler.prototype.Handle = function (event) {
-        console.log(event);
-    };
-    return LoggingHandler;
-})();
-GlobalApplicationBus.Add(new LoggingHandler());
 //@ sourceMappingURL=ApplicationBus.js.map
