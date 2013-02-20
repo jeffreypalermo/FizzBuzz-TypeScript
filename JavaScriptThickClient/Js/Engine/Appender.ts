@@ -1,8 +1,12 @@
-﻿class Appender {
-    Append(line: string) {
-        console.log(line);
-    }
+﻿module JavaScriptThickClient.Js.Engine {
 
-    Clear() {
+    export class Appender {
+
+        Append(line: string) {
+            console.log(line);
+        }
+
+        Clear() {
+        }
     }
 }

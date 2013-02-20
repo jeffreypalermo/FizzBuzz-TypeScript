@@ -23,7 +23,7 @@
     <script type="text/javascript" src="/Js/Program.js"></script>
     <script type="text/javascript">
         $().ready(function () {
-            var appender = new Appender();
+            var appender = new JavaScriptThickClient.Js.Engine.Appender();
             appender.Append = function (line) {
                 $("#console").append("<li>" + line + "</li>");
             };

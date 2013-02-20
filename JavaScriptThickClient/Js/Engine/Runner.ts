@@ -1,4 +1,6 @@
-﻿module JavaScriptThickClient.Js.Engine {
+﻿/// <reference path="Appender.ts" />
+
+module JavaScriptThickClient.Js.Engine {
 
     export class Runner {
         replacements: any;
@@ -7,7 +9,7 @@
             this.replacements = replacements;
         }
 
-        Run(start, end, appender) {
+        Run(start, end, appender: Appender) {
             for (var i = start; i <= end; i++) {
                 appender.Append(this.GetLine(i));
             }

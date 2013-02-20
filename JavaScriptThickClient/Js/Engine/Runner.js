@@ -1,6 +1,7 @@
 var JavaScriptThickClient;
 (function (JavaScriptThickClient) {
     (function (Js) {
+        /// <reference path="Appender.ts" />
         (function (Engine) {
             var Runner = (function () {
                 function Runner(replacements) {
