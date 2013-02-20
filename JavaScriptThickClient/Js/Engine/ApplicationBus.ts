@@ -1,4 +1,7 @@
-﻿function ApplicationBus() {
+﻿/// <reference path="Handler.ts" />
+
+
+function ApplicationBus() {
     this.listeners = [];
     this.Add = function(listener) {
         this.listeners.push(listener);

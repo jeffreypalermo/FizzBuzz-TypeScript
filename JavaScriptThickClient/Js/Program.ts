@@ -1,10 +1,20 @@
 ﻿/// <reference path="Engine/Runner.ts" />
 
-function Program(configuration, appender) {
+module JavaScriptThickClient.Js {
 
-    this.appender = appender;
-    this.Main = function() {
-        var runner = new Runner(configuration.replacementRules);
-        runner.Run(configuration.lowerBound, configuration.upperBound, appender);
-    };
+    class Program {
+
+        private appender: any;
+        private configuration: any;
+
+        constructor(configuration, appender) {
+            this.appender = appender;
+            this.configuration = configuration;
+        }
+
+        Main() {
+            var runner = new Engine.Runner(this.configuration.replacementRules);
+            runner.Run(this.configuration.lowerBound, this.configuration.upperBound, this.appender);
+        }
+    }
 }
