@@ -8,6 +8,27 @@ var JavaScriptThickClient;
                     this.lowerBound = lowerBound;
                     this.upperBound = upperBound;
                 }
+                Object.defineProperty(Configuration.prototype, "ReplacementRules", {
+                    get: function () {
+                        return this.replacementRules;
+                    },
+                    enumerable: true,
+                    configurable: true
+                });
+                Object.defineProperty(Configuration.prototype, "LowerBound", {
+                    get: function () {
+                        return this.lowerBound;
+                    },
+                    enumerable: true,
+                    configurable: true
+                });
+                Object.defineProperty(Configuration.prototype, "UpperBound", {
+                    get: function () {
+                        return this.upperBound;
+                    },
+                    enumerable: true,
+                    configurable: true
+                });
                 return Configuration;
             })();
             Engine.Configuration = Configuration;            

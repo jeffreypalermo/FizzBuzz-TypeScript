@@ -2,11 +2,15 @@
 
 module JavaScriptThickClient.Js.Engine {
 
-    export class FizzBuzzCommand {
+    export class FizzBuzzCommand {  
         private configuration: Configuration;
 
         constructor(configuration) {
             this.configuration = configuration;
+        }
+
+        get Configuration(): Configuration {
+            return this.configuration;
         }
     }
 }

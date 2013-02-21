@@ -1,1 +1,1 @@
-{"version":3,"file":"Handler.js","sources":["Handler.ts"],"names":["JavaScriptThickClient","JavaScriptThickClient.Js"],"mappings":"AAAA,IAAO,qBAAqB;AAM3B,CAND,UAAO,qBAAqB;KAArBA,UAAsBA,EAAEA;YAM/BC,CAACA,+DAAAD;IANMA;AAMNA,CAAAA,yDAAA"}
+{"version":3,"file":"Handler.js","sources":["Handler.ts"],"names":["JavaScriptThickClient","JavaScriptThickClient.Js"],"mappings":"AAAA,IAAO,qBAAqB;AAO3B,CAPD,UAAO,qBAAqB;KAArBA,UAAsBA,EAAEA;YAO/BC,CAACA,+DAAAD;IAPMA;AAONA,CAAAA,yDAAA"}

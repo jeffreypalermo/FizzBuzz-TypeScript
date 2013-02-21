@@ -9,7 +9,18 @@
             this.replacementRules = replacementRules;
             this.lowerBound = lowerBound;
             this.upperBound = upperBound;
+        }
 
+        get ReplacementRules(): any{
+            return this.replacementRules;
+        }
+
+        get LowerBound(): number {
+            return this.lowerBound;
+        }
+
+        get UpperBound(): number {
+            return this.upperBound;
         }
     }
 }

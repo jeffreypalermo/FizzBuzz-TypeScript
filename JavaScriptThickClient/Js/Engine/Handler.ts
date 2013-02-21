@@ -1,7 +1,8 @@
 ﻿module JavaScriptThickClient.Js.Engine {
 
     export interface Handler {
-        CanHandle(event): bool;
-        Handle(event): void;
-    };
+
+        CanHandle(event: any): bool;
+        Handle(event: any): void;
+    }
 }

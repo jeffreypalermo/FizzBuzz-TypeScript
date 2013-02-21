@@ -3,15 +3,15 @@
 module JavaScriptThickClient.Js.Engine {
 
     export class ApplicationBus {
-        private listeners: any[] = [];
+        private handlers: Handler[] = [];
 
-        Add(listener: any) {
-            this.listeners.push(listener);
+        Add(handler: Handler) {
+            this.handlers.push(handler);
         }
 
         Send(event) {
-            for (var item in this.listeners) {
-                var handler = this.listeners[item];
+            for (var item in this.handlers) {
+                var handler: any = this.handlers[item];
 
                 console.log(handler.constructor.name +
                     ": testing for handlability of " + event.constructor.name);

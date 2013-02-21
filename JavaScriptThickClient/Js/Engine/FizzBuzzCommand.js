@@ -7,6 +7,13 @@ var JavaScriptThickClient;
                 function FizzBuzzCommand(configuration) {
                     this.configuration = configuration;
                 }
+                Object.defineProperty(FizzBuzzCommand.prototype, "Configuration", {
+                    get: function () {
+                        return this.configuration;
+                    },
+                    enumerable: true,
+                    configurable: true
+                });
                 return FizzBuzzCommand;
             })();
             Engine.FizzBuzzCommand = FizzBuzzCommand;            
