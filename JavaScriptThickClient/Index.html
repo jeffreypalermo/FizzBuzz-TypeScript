@@ -47,8 +47,8 @@
             
             $("#runButton").click(function () {
                 GlobalApplicationBus.Send(this.id + " clicked");
-                
-                var config = new JavaScriptThickClient.Js.Engine.Configuration(eval('(' + $("#replacements").val() + ')'),// { 3: 'Fizz', 5: 'Buzz', 7: 'Baz' },
+                var rawReplacements = eval('(' + $("#replacements").val() + ')');
+                var config = new JavaScriptThickClient.Js.Engine.Configuration(rawReplacements,// { 3: 'Fizz', 5: 'Buzz', 7: 'Baz' },
                     $("#lowerBound").val(), $("#upperBound").val());
                 
                 GlobalApplicationBus.Send(new JavaScriptThickClient.Js.Engine.FizzBuzzCommand(config));
