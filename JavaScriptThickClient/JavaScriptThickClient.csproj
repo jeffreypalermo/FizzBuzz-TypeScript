@@ -117,6 +117,10 @@
     <Content Include="Js\Engine\LoggingHandler.js">
       <DependentUpon>LoggingHandler.ts</DependentUpon>
     </Content>
+    <TypeScriptCompile Include="Js\Engine\ReplacementRule.ts" />
+    <Content Include="Js\Engine\ReplacementRule.js">
+      <DependentUpon>ReplacementRule.ts</DependentUpon>
+    </Content>
     <Content Include="Js\Engine\Runner.js">
       <DependentUpon>Runner.ts</DependentUpon>
     </Content>

@@ -2,6 +2,7 @@ var JavaScriptThickClient;
 (function (JavaScriptThickClient) {
     (function (Js) {
         /// <reference path="Appender.ts" />
+        /// <reference path="ReplacementRule.ts" />
         (function (Engine) {
             var Runner = (function () {
                 function Runner(replacements) {
@@ -18,11 +19,11 @@ var JavaScriptThickClient;
                 };
                 Runner.prototype.GetReplacements = function (value) {
                     var replacedValue = "";
-                    for(var key in this.replacements) {
-                        if(value % key === 0) {
-                            replacedValue += this.replacements[key];
+                    this.replacements.forEach(function (rule) {
+                        if(value % rule.index === 0) {
+                            replacedValue += rule.replaceValue;
                         }
-                    }
+                    });
                     return replacedValue;
                 };
                 return Runner;

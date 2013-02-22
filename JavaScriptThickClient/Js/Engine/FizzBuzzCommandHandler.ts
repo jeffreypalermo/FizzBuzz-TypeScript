@@ -21,7 +21,7 @@ module JavaScriptThickClient.Js.Engine {
             GlobalApplicationBus.Send("Clearing appender");
             this.appender.Clear();
 
-            var runner = new Runner(event.Configuration.ReplacementRules);
+            var runner: Runner = new Runner(event.Configuration.ReplacementRules);
 
             GlobalApplicationBus.Send("Begin run");
 

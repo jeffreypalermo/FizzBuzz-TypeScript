@@ -13,6 +13,7 @@
     <script type="text/javascript" src="/Scripts/jquery.validate.js"></script>
     <script type="text/javascript" src="/Scripts/knockout-2.0.0.debug.js"></script>
     <script type="text/javascript" src="/Scripts/modernizr-2.0.6-development-only.js"></script>
+    <script type="text/javascript" src="/Js/Engine/ReplacementRule.js"></script>
     <script type="text/javascript" src="Js/Engine/Handler.js"></script>
     <script type="text/javascript" src="Js/Engine/FizzBuzzCommandHandler.js"></script>
     <script type="text/javascript" src="Js/Engine/FizzBuzzCommand.js"></script>
@@ -22,6 +23,7 @@
     <script type="text/javascript" src="/Js/Engine/Runner.js"></script>
     <script type="text/javascript" src="/Js/Program.js"></script>
     <script type="text/javascript" src="/Js/Engine/LoggingHandler.js"></script>
+    
     <script type="text/javascript">
         
         $().ready(function () {
@@ -45,7 +47,7 @@
             
             $("#runButton").click(function () {
                 GlobalApplicationBus.Send(this.id + " clicked");
-
+                
                 var config = new JavaScriptThickClient.Js.Engine.Configuration(eval('(' + $("#replacements").val() + ')'),// { 3: 'Fizz', 5: 'Buzz', 7: 'Baz' },
                     $("#lowerBound").val(), $("#upperBound").val());
                 
@@ -62,7 +64,8 @@
         </div>
         <div class="sixteen columns ui-widget-content">
             <div class="four columns">
-                <input id="replacements" type="text" placeholder="Replacements" value="{ 3: 'Fizz', 5: 'Buzz', 7: 'Baz' }" class="full-width"/>
+                <input id="replacements" type="text" placeholder="Replacements" 
+                       value="[{'index':'3', 'replaceValue':'Fizz'}, {'index':'5', 'replaceValue':'Buzz'}, {'index':'7', 'replaceValue':'Baz'}]" class="full-width"/>
                 <input id="lowerBound" type="text" placeholder="Lower bound" class="full-width" value="1"/>
                 <input id="upperBound" type="text" placeholder="Upper bound" class="full-width" value="50"/>
                 <button id="runButton" class="full-width">Run!</button>
